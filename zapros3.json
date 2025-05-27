@@ -1,0 +1,79 @@
+[
+  {
+    "Plan": {
+      "Node Type": "Hash Join",
+      "Parallel Aware": false,
+      "Async Capable": false,
+      "Join Type": "Semi",
+      "Startup Cost": 13505.00,
+      "Total Cost": 26513.00,
+      "Plan Rows": 280000,
+      "Plan Width": 15,
+      "Actual Startup Time": 163.094,
+      "Actual Total Time": 578.500,
+      "Actual Rows": 280000,
+      "Actual Loops": 1,
+      "Inner Unique": false,
+      "Hash Cond": "(table1.id1 = table2.id1)",
+      "Plans": [
+        {
+          "Node Type": "Seq Scan",
+          "Parent Relationship": "Outer",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Relation Name": "table1",
+          "Alias": "table1",
+          "Startup Cost": 0.00,
+          "Total Cost": 4859.00,
+          "Plan Rows": 280000,
+          "Plan Width": 15,
+          "Actual Startup Time": 0.018,
+          "Actual Total Time": 45.544,
+          "Actual Rows": 280000,
+          "Actual Loops": 1
+        },
+        {
+          "Node Type": "Hash",
+          "Parent Relationship": "Inner",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Startup Cost": 6942.00,
+          "Total Cost": 6942.00,
+          "Plan Rows": 400000,
+          "Plan Width": 4,
+          "Actual Startup Time": 162.039,
+          "Actual Total Time": 162.041,
+          "Actual Rows": 400000,
+          "Actual Loops": 1,
+          "Hash Buckets": 262144,
+          "Original Hash Buckets": 262144,
+          "Hash Batches": 4,
+          "Original Hash Batches": 4,
+          "Peak Memory Usage": 5563,
+          "Plans": [
+            {
+              "Node Type": "Seq Scan",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Relation Name": "table2",
+              "Alias": "table2",
+              "Startup Cost": 0.00,
+              "Total Cost": 6942.00,
+              "Plan Rows": 400000,
+              "Plan Width": 4,
+              "Actual Startup Time": 0.020,
+              "Actual Total Time": 54.517,
+              "Actual Rows": 400000,
+              "Actual Loops": 1
+            }
+          ]
+        }
+      ]
+    },
+    "Planning Time": 0.344,
+    "Triggers": [
+    ],
+    "Execution Time": 597.192
+  }
+]

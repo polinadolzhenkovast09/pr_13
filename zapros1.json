@@ -1,0 +1,45 @@
+[
+  {
+    "Plan": {
+      "Node Type": "Aggregate",
+      "Strategy": "Sorted",
+      "Partial Mode": "Simple",
+      "Parallel Aware": false,
+      "Async Capable": false,
+      "Startup Cost": 0.42,
+      "Total Cost": 13948.42,
+      "Plan Rows": 280000,
+      "Plan Width": 12,
+      "Actual Startup Time": 0.133,
+      "Actual Total Time": 194.920,
+      "Actual Rows": 280000,
+      "Actual Loops": 1,
+      "Group Key": ["id1"],
+      "Plans": [
+        {
+          "Node Type": "Index Only Scan",
+          "Parent Relationship": "Outer",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Scan Direction": "Forward",
+          "Index Name": "table1_pkey",
+          "Relation Name": "table1",
+          "Alias": "table1",
+          "Startup Cost": 0.42,
+          "Total Cost": 9748.42,
+          "Plan Rows": 280000,
+          "Plan Width": 4,
+          "Actual Startup Time": 0.111,
+          "Actual Total Time": 59.083,
+          "Actual Rows": 280000,
+          "Actual Loops": 1,
+          "Heap Fetches": 99
+        }
+      ]
+    },
+    "Planning Time": 0.335,
+    "Triggers": [
+    ],
+    "Execution Time": 210.668
+  }
+]
